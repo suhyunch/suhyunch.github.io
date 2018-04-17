@@ -4,9 +4,9 @@ title: "Ready, Set, Go"
 description: "I will make a game which simple but grow me up."
 logo: # 120x120 px default image used for Twitter summary card
 teaser: # 400x250 px default teaser image used in image archive grid
-locale: "ko"
-url: "https://suhyunch.github.io/"
-feed: "https://github.com/suhyunch/suhyunch.github.io.git"
+locale: en
+url:
+feed:
   path: atom.xml
 
 # Jekyll configuration
@@ -25,14 +25,14 @@ gems:
 
 
 # Site owner
-owner: "SuHyun"
-  name: "suhyun"
-  email: "b215220@daum.net"
+owner:
+  name:
+  email:
   twitter:
   google:
     ad-client:
     ad-slot:
-  bio: "Incheon, Korea"
+  bio:
   avatar: bio-photo.jpg # 160x160 px image for author byline
   disqus-shortname:
 
