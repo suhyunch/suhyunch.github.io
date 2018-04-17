@@ -1,8 +1,15 @@
-<div class="pagination clearfix">
-  {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path }}" class="previous"><i class="fa fa-angle-left" aria-hidden="true"></i> Previous</a>
-  {% endif %}
-  {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path }}" class="next">Next <i class="fa fa-angle-right" aria-hidden="true"></i></a>
-  {% endif %}
-</div>
+<nav class="pagination">
+  {% capture category_name %}{{ page.categories | first }}{% endcapture %}
+  {% for post in site.categories.[category_name] %}
+    {% if post.url == page.url %}
+      {% assign post_index0 = forloop.index0 %}
+      {% assign post_index1 = forloop.index %}
+    {% endif %}
+  {% endfor %}
+  {% for post in site.categories.[category_name] %}
+    {% if post_index0 == forloop.index %}{% assign next_post = post %}{% endif %}
+    {% if post_index1 == forloop.index0 %}{% assign prev_post = post %}{% endif %}
+  {% endfor %}
+  {% if prev_post %}<a class="prev" href="{{ site.url }}{{ prev_post.url }}">{{ prev_post.title }}</a>{% endif %}
+  {% if next_post %}<a class="next" href="{{ site.url }}{{ next_post.url }}">{{ next_post.title }}</a>{% endif %}
+</nav>
