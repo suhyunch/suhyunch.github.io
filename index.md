@@ -1,7 +1,7 @@
 ---
 layout: archive
 permalink: /
-title: "SuHyun Cheon"
+title: "Ready, Set, Go"
 ---
 
 <div class="tiles">
